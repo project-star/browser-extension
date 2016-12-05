@@ -59,11 +59,11 @@ function BrowserAction(chromeBrowserAction) {
 
     if (state.state === states.ACTIVE) {
       activeIcon = icons[states.ACTIVE];
-      title = 'Hypothesis is active';
+      title = 'Renoted On';
     } else if (state.state === states.INACTIVE) {
-      title = 'Hypothesis is inactive';
+      title = 'Renoted Off';
     } else if (state.state === states.ERRORED) {
-      title = 'Hypothesis failed to load';
+      title = 'Renoted Failed';
       badgeText = '!';
     } else {
       throw new Error('Unknown tab state');
@@ -77,9 +77,9 @@ function BrowserAction(chromeBrowserAction) {
         totalString = '999+';
       }
       if (state.annotationCount === 1) {
-        countLabel = _("There's 1 annotation on this page");
+        countLabel = _("There's 1 renotes on this page");
       } else {
-        countLabel = _('There are ' + totalString + ' annotations on ' +
+        countLabel = _('There are ' + totalString + ' renotes on ' +
                   'this page');
       }
       title = countLabel;
