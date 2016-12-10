@@ -97,7 +97,7 @@ function HypothesisChromeExtension(dependencies) {
       return;
     }
 
-    chromeTabs.create({url: 'https://hypothes.is/welcome'}, function (tab) {
+    chromeTabs.create({url: 'http://renoted.com/login'}, function (tab) {
       state.activateTab(tab.id);
     });
   };
