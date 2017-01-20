@@ -24,7 +24,7 @@ var buildType = settings.buildType;
 // build. Production builds use the default color and no text
 var badgeThemes = {
   'dev': {
-    defaultText: 'DEV',
+    defaultText: '',
     color: '#5BCF59', // Emerald green
   },
   'staging': {
