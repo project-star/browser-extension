@@ -1,10 +1,10 @@
 {
   "buildType": "dev",
 
-  "apiUrl": "http://renoted.com:5000/api/",
-  "bouncerUrl": "http://renoted.com:5000/",
-  "serviceUrl": "http://renoted.com:5000/",
-  "websocketUrl": "ws://renoted.com:5001/ws",
+  "apiUrl": "https://renoted.com/api/",
+  "bouncerUrl": "https://renoted.com/",
+  "serviceUrl": "https://renoted.com/",
+  "websocketUrl": "wss://localhost:5001/ws",
 
   "browserIsChrome": true
 }
