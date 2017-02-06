@@ -207,6 +207,10 @@ function HypothesisChromeExtension(dependencies) {
   function onTabCreated(tab) {
     // Clear the state in case there is old, conflicting data in storage.
     state.clearTab(tab.id);
+
+    //Activate the tab by default on each new tab creation
+    //FIX ME: Handle the error state
+    state.activateTab(tab.id)
   }
 
   function onTabRemoved(tabId) {
