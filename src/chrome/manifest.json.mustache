@@ -1,8 +1,8 @@
 {
   "name": "ReNoted - Your Digital Mind Palace",
   "short_name": "ReNoted",
-  "version": "0.2.0.4",
-  "version_name": "0.2.0.4",
+  "version": "0.2.1.0",
+  "version_name": "0.2.1.0",
   "manifest_version": 2,
 
   {{#browserIsChrome}}
@@ -38,12 +38,13 @@
   "offline_enabled": false,
   "permissions": [
     "<all_urls>",
-
+    "identity",
+    "*://*.google.com/*",
     "contentSettings",
     "storage",
     "tabs"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.youtube.com/iframe_api  https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl1Omgyb/www-widgetapi.js https://w.soundcloud.com/player/api.js ; object-src 'self'; font-src 'self' data:;",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.youtube.com/iframe_api  https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl1Omgyb/www-widgetapi.js https://w.soundcloud.com/player/api.js https://*.google.com ; object-src 'self'; font-src 'self' data:;",
 
   "background": {
     {{#browserIsChrome}}
@@ -68,6 +69,12 @@
     "help/*",
     "content/web/viewer.html"
   ],
+  "oauth2": {
+    "client_id": "947422137587-vmcn6elvdaejsnm2tijvcbug1qkti29i.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/plus.login","https://www.googleapis.com/auth/userinfo.email","https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
   "externally_connectable": {
     {{#bouncerUrl}}"matches": ["{{&bouncerUrl}}*",
     "*://soundcloud.com/*"]{{/bouncerUrl}}
