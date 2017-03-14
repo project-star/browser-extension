@@ -189,7 +189,7 @@ function HypothesisChromeExtension(dependencies) {
         newActiveState = TabState.states.INACTIVE;
       }
       else {
-        newActiveState = TabState.states.ACTIVE;
+        newActiveState = tabState.state;
       }
       state.setState(tabId, {
         ready: true,
