@@ -185,7 +185,7 @@ function HypothesisChromeExtension(dependencies) {
       if (tabState.directLinkedAnnotation) {
         newActiveState = TabState.states.ACTIVE;
       }
-      if (tab.url.indexOf("slack.com") !== -1){
+      if (tab.url.indexOf("slack.com") !== -1 || tab.url.indexOf("renoted.com") !== -1){
         newActiveState = TabState.states.INACTIVE;
       }
       else {
@@ -216,7 +216,7 @@ function HypothesisChromeExtension(dependencies) {
 
     //Activate the tab by default on each new tab creation
     //FIX ME: Handle the error state
-    if (tab.url.indexOf("slack.com") !== -1){
+    if (tab.url.indexOf("slack.com") !== -1 || tab.url.indexOf("renoted.com") !== -1){
         state.deactivateTab(tab.id)
     }
     else
