@@ -324,9 +324,9 @@ function SidebarInjector(chromeTabs, dependencies) {
   function injectConfig(tabId, config) {
     var configStr = JSON.stringify(config).replace(/"/g, '\\"');
     var configCode =
-      'var hypothesisConfig = "' + configStr + '";\n' +
+      'var renotedConfig = "' + configStr + '";\n' +
       '(' + addJSONScriptTagFn.toString() + ')' +
-      '("js-hypothesis-config", hypothesisConfig);\n';
+      '("js-renoted-config", renotedConfig);\n';
     return executeScriptFn(tabId, {code: configCode});
   }
 }
